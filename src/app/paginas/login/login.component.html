@@ -1,0 +1,40 @@
+    <!-- Pantalla de login -->
+        <h1 class="text-center display-4">
+            Entrar al Sistema
+        </h1>
+        <form class="mt-5" (ngSubmit)="enviar()">
+            <div class="form-group row justify-content-center">
+                <label class="col-sm-2 col-form-label">
+                    Usuario
+                </label>
+                <input type="text" class="col-sm-6 form-control" 
+                    [(ngModel)]="usuario" name="usuario" 
+                    placeholder="Escribe tu nombre de usuario" required>
+                
+                <!--
+                <small *ngIf="class.ng-invalid"
+                       class="form-text text-danger">
+                    Debe introducir un usuario v&aacute;lido
+                </small>
+                -->
+            </div>
+
+            <div class="form-group row justify-content-center">
+                <label class="col-sm-2 col-form-label">
+                    Contraseña
+                </label>
+                <input type="password" class="col-sm-6 form-control" 
+                    [(ngModel)]="contrasena" name="contrasena"
+                    placeholder="Escribe tu contraseña" required>
+            </div>
+            <!--
+            <small *ngIf="class.ng-invalid" 
+                class="form-text text-danger">
+                Debe introducir una contraseña v&aacute;lida
+            </small>
+            -->
+            
+            <div class="row justify-content-center">
+                <button type="submit" class="col-4 btn btn-primary mt-5 p-2">Enviar</button>
+            </div>
+        </form>
